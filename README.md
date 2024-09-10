@@ -4,6 +4,74 @@ This repository contains the test cases for a Task Manager application built usi
 
 The following test cases ensure the proper functioning of the different components of the application. The test suite focuses on unit and integration tests to verify core functionalities such as task manipulation, filtering, and task state management.
 
+This project is a task management application built using Next.js with TypeScript. It is designed to manage daily tasks effectively.
+
+![Skärmavbild 2024-09-10 kl  16 52 58](https://github.com/user-attachments/assets/c055c541-faa5-4c72-96ce-048b86717123)![Skärmavbild 2024-09-10 kl  16 54 15](https://github.com/user-attachments/assets/e0abba95-5176-4137-a35a-c4200875d9cf)![Skärmavbild 2024-09-10 kl  16 55 49](https://github.com/user-attachments/assets/fe4ff4d4-06eb-448e-8e4c-78632f90797e)
+
+
+
+
+
+
+## Prerequisites
+
+Before you begin, ensure you have the following installed:
+- [Node.js](https://nodejs.org/en/) (v12 or above)
+- [npm](https://www.npmjs.com/)
+
+## Getting Started
+
+To get started with the project, clone the repository and install the dependencies.
+
+
+### Clone the repository
+```
+git clone https://github.com/africandeluxe/task-manager-tests.git
+cd task-manager-test
+```
+### Install dependencies
+```
+npm install --save-dev jest @testing-library/react @testing-library/jest-dom
+```
+
+### Configure Jest for Testing
+```
+touch jest.config.js
+```
+### Add the following to jest.setup.js:
+```
+import '@testing-library/jest-dom';
+```
+
+### Add the following configuration to jest.config.js:
+```
+module.exports = {
+  testEnvironment: 'jsdom',
+  setupFilesAfterEnv: ['<rootDir>/jest.setup.js'],
+  moduleFileExtensions: ['ts', 'tsx', 'js', 'jsx'],
+  testPathIgnorePatterns: ['/node_modules/', '/.next/'],
+  transform: {
+    '^.+\\.(js|jsx|ts|tsx)$': ['babel-jest', { presets: ['next/babel'] }]
+  },
+  moduleNameMapper: {
+    '\\.(css|less|scss|sass)$': 'identity-obj-proxy'
+  }
+};
+```
+
+### Create a jest.setup.js file in the root of your project to initialize Jest DOM utilities:
+```
+touch jest.setup.js
+```
+### Add a script to your package.json
+```
+"scripts": {
+  "test": "jest"
+}
+```
+
+Now, you can run the tests and start running the development server.
+
 ## Tests Overview
 The test cases are divided into the following categories, corresponding to the key components of the application:
 
