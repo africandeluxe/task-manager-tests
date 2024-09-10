@@ -1,4 +1,4 @@
-# Task Manager Test Suite
+# Task Manager Test
 ## Overview
 This repository contains the test cases for a Task Manager application built using React. The application allows users to manage tasks by adding, editing, deleting, and marking tasks as complete or incomplete. It also includes functionality for filtering tasks and clearing all tasks.
 
